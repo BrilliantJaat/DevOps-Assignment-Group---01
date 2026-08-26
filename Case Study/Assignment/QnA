@@ -1,0 +1,183 @@
+
+
+ASSIGNMENT
+Git, GitHub, GitLab and Visual Studio Code**
+Subject:Version Control and Development Tools
+
+### 1. Introduction
+
+Git is a distributed version-control system used to record and manage changes in source code. GitHub and GitLab are online platforms that host Git repositories and provide collaboration features. Visual Studio Code (VS Code) is a source-code editor with built-in Git support. These tools are commonly used together in modern software development. 
+
+### 2. Questions and Answers
+
+Q1. What is Git?
+Git is a distributed version-control system. It helps developers track changes in files, maintain different versions of a project, create branches, and collaborate safely.
+
+Q2. Why is Git used?
+Git is used to keep a history of project changes, restore earlier versions, work on features independently, and collaborate with other developers.
+
+Q3. What is a Git repository?
+A Git repository is a project directory that contains the files and the Git information required to track their history and changes.
+
+Q4. What is GitHub?
+GitHub is an online platform for hosting Git repositories. It supports collaboration, code review, pull requests, issues, project management, and other development features.
+
+Q5. What is GitLab?
+GitLab is a Git-based development platform that provides repository hosting, collaboration, issue tracking, and DevOps features such as continuous integration and continuous delivery.
+
+Q6. What is VS Code?
+Visual Studio Code is a lightweight source-code editor developed by Microsoft. It supports many programming languages and provides an integrated terminal and Source Control features.
+
+Q7. What is the difference between Git and GitHub?
+Git is the version-control software that runs on a computer. GitHub is an online service used to host Git repositories and collaborate with others.
+
+Q8. What is the difference between GitHub and GitLab?
+Both are platforms for hosting Git repositories and collaborating on software projects. GitLab also has a strong focus on integrated DevOps and CI/CD workflows.
+
+Q9. What is a commit?*
+A commit is a saved snapshot of changes in a Git repository. A commit normally includes a message describing what was changed. 
+
+Q10. What is a branch?
+A branch is an independent line of development. Developers can create branches to work on features or fixes without immediately changing the main branch.
+
+Q11. What is staging in Git?
+Staging means selecting changes that will be included in the next commit. The command `git add` is commonly used to stage changes.
+
+Q12. What is a remote repository?
+A remote repository is a Git repository stored somewhere outside the local computer, such as on GitHub or GitLab.
+
+Q13. What does `git clone` do?
+It creates a local copy of an existing remote repository and downloads its files and Git history.
+
+Q14. What does `git push` do?
+It sends local commits to a remote repository such as GitHub or GitLab.
+
+Q15. What does `git pull` do?
+It downloads changes from a remote repository and integrates them into the current local branch. 
+
+### 3. Important Git Commands
+
+
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+git init
+git status
+git add .
+git commit -m "message"
+git log --oneline
+git branch
+git switch -c feature
+git switch main
+git merge feature
+git remote -v
+git push
+git pull
+git clone
+
+
+These commands are explained in the PDF from lines 57–73. 
+
+### 4. Practical Example: Git + GitHub
+mkdir student-project
+cd student-project
+git init
+echo "# Student Project" > README.md
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/USERNAME/student-project.git
+git push -u origin main
+
+
+### 5. Practical Example: Branching
+git switch -c login-feature
+# Make changes to the project
+git add .
+git commit -m "Added login feature"
+git switch main
+git merge login-feature
+git push origin main
+
+
+### 6. GitHub and GitLab Questions
+
+Q16. How do you connect a local Git repository to GitHub?
+Use `git remote add origin` followed by the URL of the GitHub repository, then push the local branch using `git push`.
+
+Q17. How do you clone a GitLab repository?
+Use `git clone` followed by the GitLab repository URL.
+
+Q18. Why are remote repositories useful?
+They provide online storage for project history and make collaboration, backup, code review, and sharing easier.
+
+Q19. What is a pull request?
+A pull request is a request to merge changes from one branch into another. It allows changes to be reviewed before they are merged.
+
+Q20. What is CI/CD in GitLab?
+CI/CD stands for Continuous Integration and Continuous Delivery or Deployment. It automates tasks such as building, testing, and deploying software. 
+
+### 7. VS Code Questions and Answers
+
+Q21. How can Git be used inside VS Code?
+VS Code provides a Source Control panel and integrated terminal through which users can stage files, commit changes, create branches, push changes, and pull changes.
+
+Q22. How do you open a project in VS Code from the terminal?
+code .
+
+Q23. What is the Source Control panel?
+It is the VS Code interface for viewing changes and performing Git operations such as staging, committing, branching, and synchronization.
+
+Q24. What is the advantage of using VS Code with Git?
+It allows developers to edit code and manage version control from the same application, making the development workflow faster and easier. 
+
+### 8. Short-Answer Questions
+
+1. Define version control.
+2. What is the purpose of `git init`?
+3. What is the purpose of `git add`?
+4. What is the purpose of `git commit`?
+5. What is the difference between a local and remote repository?
+6. What is a Git branch?
+7. What is GitHub used for?
+8. What is GitLab used for?
+9. What is VS Code?
+10. What is the purpose of `git pull`?
+
+### 9. Practice Questions
+
+1. Install Git and find the installed Git version.
+2. Configure your Git username and email.
+3. Create a new folder named `college-project` and initialize it as a Git repository.
+4. Create a `README.md` file and add a short description.
+5. Check repository status before and after staging.
+6. Stage the README and create a commit named `"Added README"`.
+7. Create a branch named `feature-1` and switch to it.
+8. Create a second file on `feature-1`, commit it, and display commit history.
+9. Create a repository on GitHub and connect the local project.
+10. Push the main branch to GitHub.
+11. Create another branch, make a change, commit it, and push the branch.
+12. Merge the branch into main and push the updated main branch.
+13. Clone a GitHub or GitLab repository.
+14. Open the cloned project in VS Code and use Source Control.
+15. Explain `git push` and `git pull` with an example.
+16. Create a GitLab project and upload a local Git repository to it. 
+
+### 10. Viva / Oral Questions
+
+1. What is Git?
+2. Why do developers use version control?
+3. What is the difference between Git and GitHub?
+4. What is the difference between GitHub and GitLab?
+5. What is a commit?
+6. What is a branch?
+7. What is a merge?
+8. What is a remote repository?
+9. What does `git clone` do?
+10. What does `git push` do?
+11. What does `git pull` do?
+12. How does VS Code help with Git?
+
+### 11. Conclusion
+
+Git, GitHub, GitLab, and VS Code are important tools in modern software development. Git provides version control, while GitHub and GitLab provide online collaboration and repository hosting. VS Code provides a convenient environment for writing code and performing Git operations. Learning these tools helps students understand professional software-development workflows and collaborative programming. 
