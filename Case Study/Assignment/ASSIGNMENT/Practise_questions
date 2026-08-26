@@ -1,5 +1,1 @@
-cd ASSIGNMENT
-git status
-git add Git_GitHub_GitLab_VS_Code_Assignment.pdf
-git commit -m "Added assignment PDF"
-git push
+
