@@ -527,6 +527,443 @@ View a compact commit history graph.
 | View remotes           | `git remote -v`           |
 
 ---
+# GIT + GITLAB CHEATSHEET
+
+## 1. GIT SETUP
+
+```bash
+git --version
+
+git config --global user.name "Your Name"
+
+git config --global user.email "you@example.com"
+
+git config --list
+```
+
+---
+
+## 2. CREATE / CLONE REPOSITORY
+
+```bash
+# Create new repository
+git init
+
+# Clone GitLab repository
+git clone https://gitlab.com/username/project.git
+
+# Clone into specific folder
+git clone https://gitlab.com/username/project.git my-project
+```
+
+---
+
+## 3. CHECK STATUS
+
+```bash
+git status
+```
+
+---
+
+## 4. ADD AND COMMIT
+
+```bash
+# Add one file
+git add filename.txt
+
+# Add all files
+git add .
+
+# Commit changes
+git commit -m "Your commit message"
+
+# Add and commit tracked files
+git commit -am "Your commit message"
+```
+
+---
+
+## 5. BRANCHES
+
+```bash
+# List branches
+git branch
+
+# Create branch
+git branch feature-login
+
+# Switch branch
+git switch feature-login
+
+# Create and switch to branch
+git switch -c feature-login
+
+# Delete branch
+git branch -d feature-login
+
+# Force delete branch
+git branch -D feature-login
+```
+
+---
+
+## 6. PUSH / PULL
+
+```bash
+# Push changes
+git push
+
+# Push new branch
+git push -u origin feature-login
+
+# Pull latest changes
+git pull
+
+# Download changes without merging
+git fetch
+
+# Fetch all branches
+git fetch --all
+```
+
+---
+
+## 7. REMOTE REPOSITORY
+
+```bash
+# Show remote repositories
+git remote -v
+
+# Add GitLab remote
+git remote add origin https://gitlab.com/username/project.git
+
+# Change remote URL
+git remote set-url origin https://gitlab.com/username/project.git
+
+# Remove remote
+git remote remove origin
+```
+
+---
+
+## 8. GIT LOG / HISTORY
+
+```bash
+# Full commit history
+git log
+
+# Short commit history
+git log --oneline
+
+# Graph view
+git log --oneline --graph --all
+
+# Show specific commit
+git show <commit-id>
+
+# Show last 5 commits
+git log -5
+```
+
+---
+
+## 9. CHECK CHANGES
+
+```bash
+# Show unstaged changes
+git diff
+
+# Show staged changes
+git diff --staged
+
+# Compare two commits
+git diff <commit1> <commit2>
+```
+
+---
+
+## 10. UNDO CHANGES
+
+```bash
+# Undo changes in a file
+git restore filename.txt
+
+# Undo all unstaged changes
+git restore .
+
+# Unstage a file
+git restore --staged filename.txt
+
+# Undo last commit but keep changes staged
+git reset --soft HEAD~1
+
+# Undo last commit and unstage changes
+git reset --mixed HEAD~1
+
+# Undo last commit and DELETE changes
+git reset --hard HEAD~1
+
+# Safely undo a commit
+git revert <commit-id>
+
+# Change last commit message
+git commit --amend -m "New commit message"
+```
+
+---
+
+## 11. STASH
+
+```bash
+# Save current changes
+git stash
+
+# Save with message
+git stash push -m "My changes"
+
+# List stashes
+git stash list
+
+# Apply latest stash
+git stash apply
+
+# Apply and remove latest stash
+git stash pop
+
+# Delete stash
+git stash drop
+```
+
+---
+
+## 12. MERGE
+
+```bash
+# Switch to main
+git switch main
+
+# Get latest main
+git pull
+
+# Merge feature branch
+git merge feature-login
+
+# Push merged changes
+git push
+```
+
+---
+
+## 13. MERGE CONFLICT
+
+```bash
+# Check conflicts
+git status
+
+# After fixing conflicts
+git add .
+
+git commit -m "Resolve merge conflict"
+
+git push
+```
+
+---
+
+## 14. REBASE
+
+```bash
+# Switch to feature branch
+git switch feature-login
+
+# Rebase with main
+git rebase main
+
+# After resolving conflict
+git add .
+
+git rebase --continue
+
+# Cancel rebase
+git rebase --abort
+```
+
+---
+
+# GITLAB WORKFLOW
+
+```bash
+# 1. Clone repository
+git clone https://gitlab.com/username/project.git
+
+# 2. Enter project
+cd project
+
+# 3. Switch to main
+git switch main
+
+# 4. Get latest changes
+git pull
+
+# 5. Create feature branch
+git switch -c feature/login
+
+# 6. Make your changes
+
+# 7. Check changes
+git status
+
+# 8. Add changes
+git add .
+
+# 9. Commit
+git commit -m "Add login feature"
+
+# 10. Push branch to GitLab
+git push -u origin feature/login
+```
+
+Then:
+
+```text
+GitLab
+   ↓
+Create Merge Request
+   ↓
+Code Review
+   ↓
+CI/CD Pipeline
+   ↓
+Approval
+   ↓
+Merge into main
+```
+
+---
+
+# GITLAB CI/CD
+
+File:
+
+```text
+.gitlab-ci.yml
+```
+
+Basic example:
+
+```yaml
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "Building application"
+
+test:
+  stage: test
+  script:
+    - echo "Running tests"
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying application"
+```
+
+---
+
+# GITLAB CI VARIABLES
+
+```yaml
+my_job:
+  script:
+    - echo "$MY_VARIABLE"
+```
+
+Store secrets in:
+
+```text
+GitLab
+→ Settings
+→ CI/CD
+→ Variables
+```
+
+DO NOT put passwords, API keys, or private keys directly in `.gitlab-ci.yml`.
+
+---
+
+# GITLAB ARTIFACTS
+
+```yaml
+build:
+  script:
+    - npm run build
+
+  artifacts:
+    paths:
+      - dist/
+```
+
+---
+
+# IMPORTANT GIT COMMANDS
+
+```bash
+git init
+git clone <url>
+
+git status
+
+git add .
+git commit -m "message"
+
+git push
+git pull
+git fetch
+
+git branch
+git switch -c <branch>
+git switch <branch>
+
+git merge <branch>
+git rebase <branch>
+
+git log --oneline
+git diff
+
+git stash
+git stash pop
+
+git restore <file>
+git revert <commit>
+```
+
+---
+
+# MOST COMMON DAILY WORKFLOW
+
+```bash
+git switch main
+git pull
+
+git switch -c feature/my-feature
+
+# Make changes
+
+git status
+git add .
+git commit -m "Add my feature"
+
+git push -u origin feature/my-feature
+```
+
+Then create a **Merge Request in GitLab** and merge the branch after review.
+
 
 
 
