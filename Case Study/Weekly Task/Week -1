@@ -1,0 +1,69 @@
+# Week 1 - Git Basics
+
+**Name:** Naveen  
+**Email:** nc080029@gmail.com
+
+## Objective
+
+To understand Git, version control, Git repository, and basic
+Git commands used in software development and DevOps.
+
+## What is Git?
+
+Git is a distributed version control system used to track
+changes in source code and manage different versions of a project.
+
+## Important Git Concepts
+
+- **Repository:** Stores project files and their history.
+- **Working Directory:** Area where files are created and modified.
+- **Staging Area:** Area where changes are prepared for commit.
+- **Commit:** A saved snapshot of changes.
+- **Branch:** A separate line of development.
+
+## Git Workflow
+
+**Working Directory → Staging Area → Commit → Repository**
+
+## Git Configuration
+
+```bash
+git config --global user.name "Naveen"
+git config --global user.email "nc080029@gmail.com"
+```
+
+## Basic Git Commands
+
+```bash
+git --version
+git init
+git status
+git add .
+git commit -m "Initial commit"
+git log
+git branch feature
+git switch feature
+git switch main
+git merge feature
+```
+
+## Practical Work
+
+1. Installed Git and checked its version.
+2. Configured Git username and email.
+3. Created a local Git repository.
+4. Created and added files to the repository.
+5. Committed changes using Git.
+6. Created and switched to a new branch.
+7. Practiced merging branches.
+
+## Learning Outcome
+
+After completing Week 1, I learned the basics of Git,
+version control, repositories, commits, branches, and
+commonly used Git commands.
+
+## Conclusion
+
+Git is an important DevOps tool that helps developers
+track changes, manage source code, and maintain project history.
