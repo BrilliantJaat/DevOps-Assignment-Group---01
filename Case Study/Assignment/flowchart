@@ -1,0 +1,37 @@
+
+```
++--------------------------+
+|  1. Developer Workstation |
+|  - Writes code           |
+|  - Pushes to GitHub      |
++--------------------------+
+             |
+             v
++--------------------------+
+|  2. GitHub CI            |
+|  - Automated testing     |
+|  - Security scan         |
++--------------------------+
+             |
+             v
++--------------------------+
+|  3. Build & Package      |
+|  - Creates Docker image  |
+|  - Uploads to registry   |
++--------------------------+
+             |
+             v
++--------------------------+
+|  4. Deployment           |
+|  - Updates Kubernetes    |
+|  - Zero downtime rollout |
++--------------------------+
+             |
+             v
++--------------------------+
+|  5. Monitoring           |
+|  - Tracks live health    |
+|  - Sends team alerts     |
++--------------------------+
+
+```
