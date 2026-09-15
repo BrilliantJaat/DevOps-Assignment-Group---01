@@ -1,0 +1,38 @@
+# Simple DevOps Case Study
+
+## Pipeline Overview
+
+1. **Developer Workstation**
+   * Writes code and pushes changes to GitHub.
+   
+2. **GitHub CI (Automated Testing)**
+   * Automatically runs tests and checks code quality.
+   * Scans for security vulnerabilities.
+   
+3. **Build & Package**
+   * Creates a Docker image containing the application.
+   * Uploads the image to a container registry.
+   
+4. **Deployment**
+   * Sends the new image to the Kubernetes cluster.
+   * Automatically updates live servers without downtime.
+   
+5. **Monitoring & Feedback**
+   * Monitors live traffic, application logs, and system health.
+   * Sends alerts to the team if errors occur.
+
+---
+
+## Simple Questions & Answers
+
+**Q1: Why do we use automated testing before deploying?**
+* It catches bugs early in the development cycle, preventing broken code from ever reaching real users.
+
+**Q2: What is the main benefit of using Docker in this workflow?**
+* Docker ensures the app runs identically across development, testing, and production environments, eliminating "it works on my machine" issues.
+
+**Q3: What happens if a bad update gets deployed?**
+* The deployment system automatically rolls back to the previous stable version, keeping the application online and running smoothly.
+
+**Q4: How do we keep passwords and API keys safe?**
+* Secrets are stored in secure managers (like AWS Secrets Manager or HashiCorp Vault) rather than written directly in the code repository.
