@@ -1399,7 +1399,265 @@ git push -u origin feature/my-feature
 ```
 
 Then create a **Merge Request in GitLab** and merge the branch after review.
+                 VS CODE CHEAT SHEET
+================================================
 
+1. FILE / FOLDER
+----------------
+
+New File:
+Ctrl + N
+
+Open File:
+Ctrl + O
+
+Open Folder:
+Ctrl + K, Ctrl + O
+
+Save:
+Ctrl + S
+
+Save As:
+Ctrl + Shift + S
+
+Close File:
+Ctrl + W
+
+Close All Files:
+Ctrl + K, Ctrl + W
+
+
+2. EDITING
+----------
+
+Copy Line:
+Shift + Alt + Down
+
+Move Line Down:
+Alt + Down
+
+Move Line Up:
+Alt + Up
+
+Delete Line:
+Shift + Ctrl + K
+
+Duplicate Line:
+Shift + Alt + Down
+
+Undo:
+Ctrl + Z
+
+Redo:
+Ctrl + Y
+
+Select All:
+Ctrl + A
+
+Comment / Uncomment:
+Ctrl + /
+
+Format Document:
+Shift + Alt + F
+
+
+3. SEARCH
+---------
+
+Search in File:
+Ctrl + F
+
+Replace:
+Ctrl + H
+
+Search in All Files:
+Ctrl + Shift + F
+
+Replace in All Files:
+Ctrl + Shift + H
+
+Go to Line:
+Ctrl + G
+
+
+4. CODE NAVIGATION
+------------------
+
+Go to Definition:
+F12
+
+Peek Definition:
+Alt + F12
+
+Go Back:
+Alt + Left
+
+Go Forward:
+Alt + Right
+
+Go to Symbol:
+Ctrl + Shift + O
+
+
+5. TERMINAL
+-----------
+
+Open Terminal:
+Ctrl + `
+
+New Terminal:
+Ctrl + Shift + `
+
+Close Terminal:
+Ctrl + Shift + W
+
+
+6. VS CODE SIDEBAR
+------------------
+
+Explorer:
+Ctrl + Shift + E
+
+Search:
+Ctrl + Shift + F
+
+Source Control:
+Ctrl + Shift + G
+
+Run & Debug:
+Ctrl + Shift + D
+
+Extensions:
+Ctrl + Shift + X
+
+
+7. TERMINAL COMMANDS
+--------------------
+
+Show Current Folder:
+cd
+
+Change Folder:
+cd folder-name
+
+Go Back:
+cd ..
+
+List Files:
+dir
+
+Clear Terminal:
+cls
+
+
+8. HTML
+--------
+
+HTML Boilerplate:
+!
+
+Format Code:
+Shift + Alt + F
+
+Emmet Example:
+
+div.container
+ul>li*5
+p
+h1
+button
+
+
+9. RUN PROJECT
+--------------
+
+HTML:
+Open HTML file → Right Click → Open with Live Server
+
+JavaScript:
+node filename.js
+
+React:
+npm run dev
+
+Vite:
+npm run dev
+
+
+10. GIT IN VS CODE
+------------------
+
+Check Status:
+git status
+
+Add Files:
+git add .
+
+Commit:
+git commit -m "message"
+
+Push:
+git push
+
+Pull:
+git pull
+
+Clone:
+git clone <github-url>
+
+
+11. MULTI-CURSOR
+----------------
+
+Add Cursor:
+Alt + Click
+
+Select Same Word:
+Ctrl + D
+
+Select All Same Words:
+Ctrl + Shift + L
+
+
+12. ZOOM
+--------
+
+Zoom In:
+Ctrl + +
+
+Zoom Out:
+Ctrl + -
+
+Reset Zoom:
+Ctrl + 0
+
+
+13. QUICK COMMAND
+-----------------
+
+Command Palette:
+Ctrl + Shift + P
+
+
+MOST IMPORTANT SHORTCUTS
+========================
+
+Ctrl + S       → Save
+Ctrl + C       → Copy
+Ctrl + V       → Paste
+Ctrl + X       → Cut
+Ctrl + Z       → Undo
+Ctrl + F       → Find
+Ctrl + H       → Replace
+Ctrl + /       → Comment
+Ctrl + `       → Terminal
+Ctrl + Shift + P → Command Palette
+Ctrl + Shift + E → Explorer
+Ctrl + Shift + F → Search
+Ctrl + Shift + G → Git
+Ctrl + Shift + X → Extensions
+F5             → Run/Debug
+Shift + Alt + F → Format Code
 
 
     
